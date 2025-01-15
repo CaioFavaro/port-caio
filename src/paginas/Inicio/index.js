@@ -1,5 +1,6 @@
 import Banner from "../../componentes/Banner";
 import Contato from "../../componentes/Contato";
+import Rodape from "../../componentes/Rodape";
 
 export default function Inicio() {
     return (
@@ -8,6 +9,8 @@ export default function Inicio() {
             </Banner>
             <Contato>
             </Contato>
+            <Rodape>
+            </Rodape>
         </>
     );
 }

@@ -1,84 +1,101 @@
-.contato-left{
-    flex-basis: 35%;
+/* Seção Contato */
+.contato {
+  padding: 50px 0;
+  background-color: #1b1b1b;
+  color: #fff;
+}
+
+/* Layout Responsivo: Flexbox */
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Contato à Esquerda */
+.contatoLeft {
+  flex: 1;
+  max-width: 40%;
+  text-align: left;
+}
+
+.subTitle {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contatoLeft p {
+  margin: 10px 0;
+}
+
+.contatoLeft p i {
+  color: #ff004f;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.btnCustom {
+  width: 200px;
+  background-color: #ff004f;
+  padding: 10px 30px;
+  font-size: 18px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #fff;
+  margin-top: 20px;
+}
+
+.btnCustom:hover {
+  background-color: #e6003e;
+}
+
+/* Formulário à Direita */
+.contatoRight {
+  flex: 1;
+  max-width: 55%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  background-color: #262626;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.textarea {
+  resize: none;
+}
+
+form .btnCustom {
+  padding: 10px 30px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
   }
-  
-  .contato-right{
-    flex-basis: 60%;
-  }
-  
-  .contato-left p{
-    margin-top: 30px;
-  }
-  
-  .contato-left p i{
-    color: #ff004f;
-    margin-right: 15px;
-    font-size: 25px;
-  }
-  
-  .social-icons{
-    margin-top: 30px;
-  }
-  
-  .social-icons a{
-    text-decoration: none;
-    font-size: 30px;
-    margin-right: 15px;
-    color: #ababab;
-    display: inline-block;
-    transition: transform 0.5s;
-  }
-  
-  .social-icons a:hover{
-    color: #ff004f;
-    transform: translateY(-5px);
-  }
-  
-  .btn.btn2{
-    display: inline-block;
-    background: #ff004f;
-  }
-  
-  .contato-right form{
-    width: 100%;
-  }
-  
-  form input, form textarea{
-    width: 100%;
-    border: 0;
-    outline: none;
-    background: #262626;
-    padding: 15px;
-    margin: 15px 0;
-    color: #fff;
-    font-size: 18px;
-    border-radius: 6px;
-  }
-  
-  form .btn2{
-    padding: 14px 60px;
-    font-size: 18px;
-    margin-top: 20px;
-    cursor: pointer;
-  }
-  
-  .copyright{
-    width: 100%;
+
+  .contatoLeft,
+  .contatoRight {
+    max-width: 100%;
     text-align: center;
-    padding: 25px 0;
-    background: #262626;
-    font-weight: 300;
-    margin-top: 20px;
   }
-  
-  .copyright i{
-    color: #ff004f;
-  }
-  
-  .voltar p{
-    color: #fff;
-  }
-  
-  .voltar p:hover{
-    color: #ff004f;
-  }
+}

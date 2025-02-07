@@ -1,0 +1,19 @@
+.qrCodeContainer {
+    position: fixed;
+    bottom: 20px;
+    right: 120px;
+    width: 120px;
+    height: 120px;
+    background-color: white;
+    border: 2px solid #000; /* Opcional: borda ao redor do QR code */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar destaque */
+    border-radius: 10px;
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.qrCodeContainer:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Aumenta a sombra ao passar o mouse */
+}

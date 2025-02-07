@@ -1,11 +1,8 @@
-/* Seção Contato */
 .contato {
   padding: 50px 0;
-  background-color: #1b1b1b;
-  color: #fff;
+  color: black;
 }
 
-/* Layout Responsivo: Flexbox */
 .row {
   display: flex;
   justify-content: space-between;
@@ -14,7 +11,6 @@
   flex-wrap: wrap;
 }
 
-/* Contato à Esquerda */
 .contatoLeft {
   flex: 1;
   max-width: 40%;
@@ -27,31 +23,50 @@
 }
 
 .contatoLeft p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   margin: 10px 0;
+  font-size: 18px;
 }
 
-.contatoLeft p i {
-  color: #ff004f;
-  margin-right: 10px;
+.icon {
+  color: #aa3333;
   font-size: 20px;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.socialIcon {
+  font-size: 30px;
+  color: #333;
+  transition: 0.3s;
+}
+
+.socialIcon:hover {
+  color: #aa3333;
 }
 
 .btnCustom {
   width: 200px;
-  background-color: #ff004f;
+  background-color: #aa3333;
   padding: 10px 30px;
   font-size: 18px;
   border-radius: 5px;
   text-decoration: none;
   color: #fff;
-  margin-top: 20px;
+  margin-top: 30px;
+  display: inline-block;
 }
 
 .btnCustom:hover {
-  background-color: #e6003e;
+  background-color: #881a1a;
 }
 
-/* Formulário à Direita */
 .contatoRight {
   flex: 1;
   max-width: 55%;
@@ -67,8 +82,8 @@ form {
 .input,
 .textarea {
   width: 100%;
-  background-color: #262626;
-  color: #fff;
+  background-color: #ecd9d9;
+  color: #333;
   border: none;
   outline: none;
   padding: 15px;
@@ -86,7 +101,6 @@ form .btnCustom {
   cursor: pointer;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
   .row {
     flex-direction: column;
@@ -97,5 +111,13 @@ form .btnCustom {
   .contatoRight {
     max-width: 100%;
     text-align: center;
+  }
+
+  .contatoLeft p {
+    justify-content: center;
+  }
+
+  .socialLinks {
+    justify-content: center;
   }
 }

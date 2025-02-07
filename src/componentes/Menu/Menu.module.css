@@ -1,0 +1,135 @@
+/* Menu principal */
+.cabecalho {
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navegacaoPrincipal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #eee;
+}
+
+/* Menu secundário */
+.navegacaoSecundaria {
+    background: #f5f5f5;
+    padding: 0.8rem 2rem;
+    display: flex;
+    gap: 1.5rem;
+    border-bottom: 1px solid #ddd;
+}
+
+
+.linkSecundario {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.3s;
+    padding: 0.3rem 0;
+    border-bottom: 2px solid transparent;
+}
+
+.linkSecundario:hover {
+    color: #007bff;
+    border-bottom-color: #007bff;
+}
+
+.linkSecundario.ativo {
+    color: #007bff;
+    border-bottom-color: #007bff;
+}
+
+/* Novo estilo Globo.com */
+.topBar {
+    background: #333;
+    padding: 0.5rem 2rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.topBarLink {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.topBarLink:hover {
+    color: #00acee;
+}
+
+/* Mantenha os estilos anteriores e adicione: */
+.logo {
+    font-weight: bold;
+    color: #00acee;
+    margin-right: 2rem;
+}
+
+.botaoAcao {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9em;
+}
+
+.botaoAcao:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* Ajuste o espaçamento entre itens */
+.navegacaoSecundaria {
+    gap: 1rem;
+    padding: 1rem 2rem;
+}
+
+.botao.destaque {
+    background: #aa3333;
+    color: white;
+}
+
+.botao.destaque:hover {
+    background: #ff0000;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(40,167,69,0.3);
+}
+
+.botao {
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.loginContainer {
+    margin-left: auto; /* Alinha o botão à direita */
+    padding: 0 1rem;
+}
+
+.authButton {
+    padding: 0.5rem 1rem;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.authButton:hover {
+    background: #218838;
+}

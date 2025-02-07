@@ -1,0 +1,81 @@
+/* Estilização do formulário de login */
+.loginForm {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .loginForm h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #333;
+  }
+  
+  /* Agrupamento dos campos do formulário */
+  .formGroup {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .formGroup label {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .formGroup input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .formGroup input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* Estilização da mensagem de erro */
+  .error {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 0.5rem;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  /* Botão de submissão do formulário */
+  .submitButton {
+    padding: 0.5rem 1rem;
+    background: #aa3333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+  
+  .submitButton:hover {
+    background: #fd0000;
+  }
+  
+  /* Botão para ações de autenticação (ex: Login ou Sair) */
+  .authButton {
+    padding: 0.5rem 1rem;
+    background: #aa3333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .authButton:hover {
+    background: #fd0000;
+  }
+  

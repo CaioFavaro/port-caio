@@ -1,0 +1,25 @@
+[
+    {
+        "id": 1,
+        "titulo": "Sistema Financeiro",
+        "texto": "### Sistema de Controle financeiro realizado em Flutter com Dart \n\n## O aplicativo realiaza todas as operações póssiveis de app fiannceiro de banco, com o usuario se cadastrar, registrar seus cartões, além de poder ver uma área mais analítica que mostra suas transçaões e que tipo elas são. \n\nTecnologias: Flutter e Dart. \n\nLink do projeto: [Clique aqui](https://github.com/CaioFavaro/Checkpoint05-CrossPlataform)"    
+    },
+    {
+        "id": 2,
+        "titulo": "CineTag",
+        "texto": "### Site de videos feito com TypeScript e JavaScript \n\n ## A aplicação consiste em site de video aonde se pode assisti-los, foi feito um player de video com a ajuda de uma api externa, Além disso o site possui uma página icinical aonde se poder ver mais vídeos que foram previamentes postados. \n\n Tecnologias: JavaScript, TypeScript, HTML, CSS. \n\nLink do projeto: [Clique aqui](https://github.com/CaioFavaro/Cinetag/tree/main)"
+    },
+    {
+        "id": 3,
+        "titulo": "Site Vivo",
+        "texto": "## Site vivo feito com React e JavaScript ![Imagem do Site](/assets/posts/3/img1.png) Site feito para o concurso de inovação da vivo. \n\n # A aplicação tem como Intuito servir de demonstrativo do porjeto que foi realizado a pedido da vivo em um concurso Acadêmico. Como destaque do site posso siter A rolagem de tecnologias que foram usadas no projeto, um sistema de zoom para diagrmas no site e um QrCode interativo. \n\n Tecnologia: React, JavaScript, HTML, CSS. \n\nLink do projeto: [Clique aqui](https://github.com/CaioFavaro/VIVXS)"
+    },  
+    {
+        "id": 4,
+        "titulo": "Sistemas Legados",
+        "texto": "### Sistema antigo com dados históricos dos clientes. \n\n ## Como: A API integra-se ao banco de dados Oracle, que armazena dados críticos. Utilizando Spring Data JPA, a aplicação mapeia as entidades para as tabelas existentes. Estratégias de failover e replicação garantem continuidade do serviço, com uma instância secundária do banco de dados disponível em caso de falhas. A segurança é reforçada com criptografia Jasypt para proteger credenciais e dados sensíveis. \n\n Tecnologia: Oracle, Spring Data JPA, Java. \n\nLink do projeto: [Clique aqui](https://github.com/CaioFavaro/vivx)" 
+    }
+ 
+
+  
+]

@@ -1,4 +1,3 @@
-// src/route.js ou App.tsx
 import ScrollToTop from "./componentes/ScrollToTop";
 import NaoEncontrada from "./paginas/NaoAchada";
 import Post from "./paginas/Post";
@@ -26,7 +25,6 @@ function App() {
           <Route path="/login" element={<LayoutLogin />}>
             <Route index element={<LoginPage />} />
           </Route>
-
 
           <Route path="register" element={<RegisterPage />} />
 

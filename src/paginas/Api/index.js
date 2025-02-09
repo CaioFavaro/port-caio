@@ -7,13 +7,12 @@ export default function ApiPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  
   const handleFetchApiData = async () => {
     setLoading(true);
     setError(null);
     try {
-      
-      const response = await fetch('https://portapi-k6qv.onrender.com/api/location');
+      // Certifique-se de usar a URL correta da API
+      const response = await fetch('https://port-api-7ef9.onrender.com/api/location');
       const data = await response.text();
       setApiData(data);
     } catch (err) {
@@ -33,7 +32,6 @@ export default function ApiPage() {
         {loading && <p>Carregando...</p>}
         {error && <p>{error}</p>}
         {apiData && (
-          
           <div className={styles.apiResult} dangerouslySetInnerHTML={{ __html: apiData }} />
         )}
       </div>

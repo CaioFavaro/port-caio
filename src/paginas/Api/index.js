@@ -7,14 +7,14 @@ export default function ApiPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  // Função que faz a chamada à API de localização
+  
   const handleFetchApiData = async () => {
     setLoading(true);
     setError(null);
     try {
-      // Substitua 'https://sua-api-no-render.com' pela URL da sua API hospedada
+      
       const response = await fetch('https://portapi-k6qv.onrender.com/');
-      // Como sua API retorna uma página HTML, usamos response.text()
+      
       const data = await response.text();
       setApiData(data);
     } catch (err) {
@@ -34,7 +34,7 @@ export default function ApiPage() {
         {loading && <p>Carregando...</p>}
         {error && <p>{error}</p>}
         {apiData && (
-          // Como a API retorna HTML, usamos dangerouslySetInnerHTML para renderizá-lo
+          
           <div className={styles.apiResult} dangerouslySetInnerHTML={{ __html: apiData }} />
         )}
       </div>

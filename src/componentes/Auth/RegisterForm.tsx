@@ -17,7 +17,7 @@ export function RegisterForm() {
     try {
       await signup(email, password);
       setSuccess('Registro realizado com sucesso! Por favor, confirme seu email.');
-      // Aguarda 3 segundos para exibir a mensagem de sucesso antes de redirecionar
+      
       setTimeout(() => {
         navigate('/');
       }, 5000);

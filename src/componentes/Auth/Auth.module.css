@@ -79,3 +79,12 @@
     background: #fd0000;
   }
   
+  .success {
+    background: #d4edda;
+    color: #155724;
+    padding: 0.5rem;
+    border: 1px solid #c3e6cb;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    text-align: center;
+  }

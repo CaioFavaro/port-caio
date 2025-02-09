@@ -12,7 +12,7 @@ export default function ApiPage() {
     setError(null);
     try {
       // Certifique-se de usar a URL correta da API
-      const response = await fetch('https://port-api-7ef9.onrender.com/api/location');
+      const response = await fetch('https://portapi-k6qv.onrender.com/api/location');
       const data = await response.text();
       setApiData(data);
     } catch (err) {

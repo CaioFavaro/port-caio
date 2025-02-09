@@ -17,14 +17,6 @@ export default function Inicio() {
     return (
         <PostModelo>
             <div id="inicio" className={styles.secao}>
-                <h3 className={styles.subtitulo}>Portfólio Profissional</h3>
-                <p className={styles.paragrafo}>
-                    Olá! Sou Caio Oliveira, tenho 23 anos e sou formado em Sistemas de Informação pela FIAP. Atuei como estagiário no Departamento de Tecnologia da Informação da Prefeitura de Cotia, onde busquei sempre garantir excelência e perfeccionismo em minhas atividades.
-
-                    Natural de Cotia, São Paulo, sempre fui profundamente conectado à tecnologia. Através dela, consigo alinhar minhas ideias criativas às necessidades do mercado, encontrando realização profissional.
-
-                    Sou movido por desafios e acredito que a criatividade e a organização são ferramentas essenciais para resolver problemas de maneira inovadora. Estou constantemente em busca de novos conhecimentos e oportunidades que me permitam contribuir para o crescimento e sucesso das equipes das quais faço parte.
-                </p>
             </div>
 
             
@@ -60,7 +52,15 @@ export default function Inicio() {
                             </TabPanel>
                         </Tabs>
                     </div>
+                    
                 </div>
+                <p className={styles.paragrafo}>
+                    Olá! Sou Caio Oliveira, tenho 23 anos e sou formado em Sistemas de Informação pela FIAP. Atuei como estagiário no Departamento de Tecnologia da Informação da Prefeitura de Cotia, onde busquei sempre garantir excelência e perfeccionismo em minhas atividades.
+
+                    Natural de Cotia, São Paulo, sempre fui profundamente conectado à tecnologia. Através dela, consigo alinhar minhas ideias criativas às necessidades do mercado, encontrando realização profissional.
+
+                    Sou movido por desafios e acredito que a criatividade e a organização são ferramentas essenciais para resolver problemas de maneira inovadora. Estou constantemente em busca de novos conhecimentos e oportunidades que me permitam contribuir para o crescimento e sucesso das equipes das quais faço parte.
+                </p>
             </div>
 
             

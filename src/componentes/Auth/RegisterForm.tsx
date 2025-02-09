@@ -1,4 +1,3 @@
-// src/componentes/Auth/RegisterForm.tsx
 import React, { useState } from 'react';
 import { useAuth } from '../../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
@@ -8,15 +7,20 @@ export function RegisterForm() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [success, setSuccess] = useState('');
   const { signup } = useAuth();
   const navigate = useNavigate();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setError('');
     try {
       await signup(email, password);
-      // Opcional: Você pode redirecionar o usuário para a página inicial ou para uma página de confirmação
-      navigate('/');
+      setSuccess('Registro realizado com sucesso! Por favor, confirme seu email.');
+      // Aguarda 3 segundos para exibir a mensagem de sucesso antes de redirecionar
+      setTimeout(() => {
+        navigate('/');
+      }, 5000);
     } catch (err: any) {
       setError(err.message);
     }
@@ -26,6 +30,7 @@ export function RegisterForm() {
     <form onSubmit={handleSubmit} className={styles.loginForm}>
       <h2>Registrar</h2>
       {error && <div className={styles.error}>{error}</div>}
+      {success && <div className={styles.success}>{success}</div>}
       <div className={styles.formGroup}>
         <label>Email:</label>
         <input

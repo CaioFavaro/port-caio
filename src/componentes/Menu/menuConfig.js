@@ -1,3 +1,5 @@
+export const menuConfig = [
+    {
         path: '/',
         links: [
             { to: '/', texto: 'Início' },

@@ -61,7 +61,7 @@ export default function Contato() {
                             </button>
 
                             <input type="hidden" name="accessKey" value="6cd30a0d-3d20-40ef-b53f-82bee0f70aa9" />
-                            <input type="hidden" name="redirectTo" value="https://port-caio-alpha.vercel.app/" />
+                            <input type="hidden" name="redirectTo" value="http://localhost:3000/" />
                         </form>
                     </div>
                 </div>

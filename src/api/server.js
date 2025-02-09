@@ -1,26 +1,65 @@
+// server.js
 const express = require('express');
+const axios = require('axios');
 const app = express();
-const port = 3001;
+const port = process.env.PORT || 3001; // Use a variável de ambiente PORT
 
 app.use(express.json());
 
-// Dados mockados
+// Exemplo de endpoint: retorna dados de usuários
 let users = [
     { id: 1, name: "João Silva", email: "joao@example.com" },
     { id: 2, name: "Maria Souza", email: "maria@example.com" }
 ];
 
-// Rotas da API
 app.get('/api/users', (req, res) => {
     res.json(users);
 });
 
-app.get('/api/users/:id', (req, res) => {
-    const user = users.find(u => u.id === parseInt(req.params.id));
-    if (!user) return res.status(404).json({ message: "Usuário não encontrado" });
-    res.json(user);
+// Novo endpoint: exibe localização do usuário (exemplo usando ipapi.co)
+app.get('/api/location', async (req, res) => {
+    const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+    try {
+        const response = await axios.get(`https://ipapi.co/${ip}/json/`);
+        const locationData = response.data;
+        const html = `
+          <!DOCTYPE html>
+          <html>
+            <head>
+              <meta charset="UTF-8">
+              <title>Sua Localização</title>
+              <style>
+                body { font-family: Arial, sans-serif; background: #f0f2f5; color: #333; }
+                .container { max-width: 600px; margin: 2rem auto; background: #fff; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+                h1 { color: #3498db; }
+                table { width: 100%; border-collapse: collapse; }
+                th, td { padding: 0.5rem; border: 1px solid #ddd; }
+                th { background: #f8f9fa; }
+              </style>
+            </head>
+            <body>
+              <div class="container">
+                <h1>Sua Localização</h1>
+                <table>
+                  <tr><th>Campo</th><th>Valor</th></tr>
+                  <tr><td>IP</td><td>${locationData.ip || ip}</td></tr>
+                  <tr><td>Cidade</td><td>${locationData.city || 'Não disponível'}</td></tr>
+                  <tr><td>Região</td><td>${locationData.region || 'Não disponível'}</td></tr>
+                  <tr><td>País</td><td>${locationData.country_name || 'Não disponível'}</td></tr>
+                  <tr><td>Latitude</td><td>${locationData.latitude || 'Não disponível'}</td></tr>
+                  <tr><td>Longitude</td><td>${locationData.longitude || 'Não disponível'}</td></tr>
+                </table>
+              </div>
+            </body>
+          </html>
+        `;
+        res.send(html);
+    } catch (error) {
+        console.error('Erro ao buscar localização:', error);
+        res.status(500).json({ message: 'Erro ao buscar localização' });
+    }
 });
 
 app.listen(port, () => {
-    console.log(`API mock rodando em http://localhost:${port}`);
+    console.log(`API rodando em http://localhost:${port}`);
 });

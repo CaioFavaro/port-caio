@@ -39,7 +39,7 @@ export default function Menu() {
                     );
                 })}
 
-                {/* Botão de Login */}
+                
                 <div className={styles.loginContainer}>
                     <LoginButton />
                 </div>

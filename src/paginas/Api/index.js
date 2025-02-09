@@ -1,45 +1,43 @@
-import PostModelo from '../../componentes/PostModelo';
+import React, { useState } from 'react';
 import PaginaPadrao from '../../componentes/PaginaPadrao';
 import styles from './Api.module.css';
 
 export default function ApiPage() {
-    const userExample = {
-        id: 123,
-        name: "João Silva",
-        email: "joao@example.com",
-        status: "active",
-        createdAt: "2023-10-01T10:00:00Z",
-        lastLogin: "2023-10-15T14:30:00Z"
-    };
+  const [apiData, setApiData] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
-    return (
-        <PaginaPadrao>
-            <PostModelo>
-                <div className={styles.container}>
-                    <h1 className={styles.titulo}>Documentação da API</h1>
-                    
-                    <div className={styles.secao}>
-                        <h2 className={styles.subtitulo}>Endpoint de Usuários</h2>
-                        
-                        <div className={styles.endpointCard}>
-                            <div className={styles.method}>GET</div>
-                            <code className={styles.path}>/api/users/&#123;id&#125;</code>
-                            
-                            <div className={styles.exemplo}>
-                                <h3>Exemplo de Resposta:</h3>
-                                <div className={styles.userCard}>
-                                    {Object.entries(userExample).map(([key, value]) => (
-                                        <div key={key} className={styles.userField}>
-                                            <label>{key}:</label>
-                                            <span>{value}</span>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </PostModelo>
-        </PaginaPadrao>
-    );
+  
+  const handleFetchApiData = async () => {
+    setLoading(true);
+    setError(null);
+    try {
+      
+      const response = await fetch('https://portapi-k6qv.onrender.com/');
+      
+      const data = await response.text();
+      setApiData(data);
+    } catch (err) {
+      console.error(err);
+      setError('Erro ao buscar dados da API.');
+    }
+    setLoading(false);
+  };
+
+  return (
+    <PaginaPadrao>
+      <div className={styles.container}>
+        <h1 className={styles.titulo}>Teste da API de Localização</h1>
+        <button onClick={handleFetchApiData} className={styles.botao}>
+          Buscar Localização
+        </button>
+        {loading && <p>Carregando...</p>}
+        {error && <p>{error}</p>}
+        {apiData && (
+          
+          <div className={styles.apiResult} dangerouslySetInnerHTML={{ __html: apiData }} />
+        )}
+      </div>
+    </PaginaPadrao>
+  );
 }

@@ -1,4 +1,3 @@
-// LoginForm.tsx ou .jsx
 import React, { useState } from 'react';
 import { useAuth } from '../../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
@@ -8,14 +7,20 @@ export function LoginForm() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [success, setSuccess] = useState('');
   const { login } = useAuth();
   const navigate = useNavigate();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setError('');
     try {
       await login(email, password);
-      navigate('/');
+      setSuccess('Login realizado com sucesso!');
+      // Aguarda 2 segundos para exibir a mensagem de sucesso antes de redirecionar
+      setTimeout(() => {
+        navigate('/');
+      }, 2000);
     } catch (err) {
       setError('Credenciais inválidas');
     }
@@ -25,6 +30,7 @@ export function LoginForm() {
     <form onSubmit={handleSubmit} className={styles.loginForm}>
       <h2>Login</h2>
       {error && <div className={styles.error}>{error}</div>}
+      {success && <div className={styles.success}>{success}</div>}
       <div className={styles.formGroup}>
         <label>Email:</label>
         <input

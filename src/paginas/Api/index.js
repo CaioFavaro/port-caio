@@ -13,8 +13,7 @@ export default function ApiPage() {
     setError(null);
     try {
       
-      const response = await fetch('https://portapi-k6qv.onrender.com/');
-      
+      const response = await fetch('https://portapi-k6qv.onrender.com/api/location');
       const data = await response.text();
       setApiData(data);
     } catch (err) {

@@ -17,7 +17,7 @@ export function LoginForm() {
     try {
       await login(email, password);
       setSuccess('Login realizado com sucesso!');
-      // Aguarda 2 segundos para exibir a mensagem de sucesso antes de redirecionar
+      
       setTimeout(() => {
         navigate('/');
       }, 2000);

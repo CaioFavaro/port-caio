@@ -19,7 +19,7 @@ export function RegisterForm() {
       setSuccess('Registro realizado com sucesso! Por favor, confirme seu email.');
       
       setTimeout(() => {
-        navigate('/');
+        navigate('/login');
       }, 5000);
     } catch (err: any) {
       setError(err.message);

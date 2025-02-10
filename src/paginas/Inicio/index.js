@@ -59,7 +59,7 @@ export default function Inicio() {
 
                     Natural de Cotia, São Paulo, sempre fui profundamente conectado à tecnologia. Através dela, consigo alinhar minhas ideias criativas às necessidades do mercado, encontrando realização profissional.
 
-                    Sou movido por desafios e acredito que a criatividade e a organização são ferramentas essenciais para resolver problemas de maneira inovadora. Estou constantemente em busca de novos conhecimentos e oportunidades que me permitam contribuir para o crescimento e sucesso das equipes das quais faço parte.
+                    Sou movido por desafios e acredito que a criatividade e a organização são ferramentas essenciais para resolver problemas de maneira inovadora. 
                 </p>
             </div>
 

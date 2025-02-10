@@ -24,16 +24,14 @@ export default function Contato() {
               </a>
             </div>
 
-            <a href="/assets/utils/Caio-Favaro-CV.pdf" download className={styles.btnCustom}>
-              Baixe meu CV
-            </a>
+            
           </div>
 
           <div className={styles.contatoRight}>
             <form action="https://api.staticforms.xyz/submit" method="post">
               <input
                 type="text"
-                name="name"  // Alterado para minúsculas
+                name="name"  
                 placeholder="Digite seu nome"
                 required
                 autoComplete="off"
@@ -41,7 +39,7 @@ export default function Contato() {
               />
               <input
                 type="email"
-                name="email"  // Alterado para minúsculas
+                name="email"  
                 placeholder="Digite seu email"
                 required
                 autoComplete="off"

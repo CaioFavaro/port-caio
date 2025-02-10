@@ -30,7 +30,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
     getSession();
 
-    // Inscrever para mudanças no estado de autenticação
+    
     const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
       setUser(session?.user ?? null);
       setIsAuthenticated(!!session);
@@ -42,7 +42,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const login = async (email: string, password: string) => {
-    // Usando a nova API signInWithPassword
+    
     const { data, error } = await supabase.auth.signInWithPassword({ email, password });
     if (error) throw new Error(error.message);
   };
